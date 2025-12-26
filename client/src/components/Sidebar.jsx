@@ -120,10 +120,11 @@ const Sidebar = ({
                 anchor="left"
                 sx={{
                     width: drawerWidth,
-                    "& .MuiDerawer-paper": {
+                    "& .MuiDrawer-paper": {
                         color: theme.palette.secondary[200],
                         backgroundColor: theme.palette.background.alt,
                         boxSixing: "border-box",
+                        overflow: "hidden",
                         borderWidth: isNonMobile ? 0 : "2px",
                         width: drawerWidth
                     }
