@@ -30,7 +30,7 @@ const Navbar = ({
       }}
     >
       <Toolbar
-        sx={{ justifyContent: "space-between" }}
+        sx={{ display: "flex", justifyContent: "space-between", border: "2px solid red"}}
       >
         {/* LEFT SIDE */}
         <FlexBetween>
