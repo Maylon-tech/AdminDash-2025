@@ -1,4 +1,5 @@
-import { useState } from 'react'
+
+import { setMode } from '../state'
 import {
   
   DarkModeOutlined,
@@ -30,7 +31,7 @@ const Navbar = ({
       }}
     >
       <Toolbar
-        sx={{ display: "flex", justifyContent: "space-between", border: "2px solid red"}}
+        sx={{justifyContent: "space-between", border: "2px solid white",}}
       >
         {/* LEFT SIDE */}
         <FlexBetween>
@@ -44,7 +45,7 @@ const Navbar = ({
             gap="3rem"
             p="0.1rem 1.5rem"
           >
-            <InputBase placeholder='Searach...' />
+            <InputBase placeholder='Search...' />
             <IconButton>
               <Search />
             </IconButton>
@@ -53,8 +54,10 @@ const Navbar = ({
         </FlexBetween>
 
         {/* RIGHT SIDE */}
-        <FlexBetween>
-          <IconButton onClick={() => dispatch(setMode())}>
+        <FlexBetween gap="1.5rem">  
+          <IconButton
+            onClick={() => dispatch(setMode())}
+          >
             {
               theme.palette.mode === 'dark' ? (
                 <DarkModeOutlined sx={{ fontSize: "25px" }} />
